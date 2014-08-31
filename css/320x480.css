@@ -60,7 +60,16 @@ body {
 	height: 320px;
 	position: relative;
 	overflow: hidden;
-	margin-top: 50px;
+	margin-top: 20px;
+}
+
+.tile-game-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
 }
 
 .tile {
@@ -274,7 +283,7 @@ body {
 .num-find-container {
 	position: absolute;
 	width: 100%;
-	top: 0px;
+	top: -320px;
 	left: 0px;
 	padding-top: 40px;
 }
@@ -395,14 +404,144 @@ body {
 div.div-ack {
 	width: 100%;
 	overflow: hidden;
-	margin-top: 10px;
+	margin-top: 30px;
 	float: none;
 	text-align: center;
+	padding-bottom: 10px;
 }
+
+div.info-game {
+	width: 100%;
+	float: none;
+}
+
+div.info-game p.strive{
+	color :white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+div.info-game div {
+	text-align: center;
+}
+
 .acknowledgement {
 	font-size: 14px;
 	color: #776e65;
 	text-align: center;
 	padding-left: 2px;
 	padding-right: 2px;
+}
+.author {
+	font-size: 16px;
+	color: white;
+}
+
+/*how to play*/
+
+div.how-container {
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.how-container div {
+	width: 100%;
+	height: 362px;
+	margin-top: 10px;
+	/*background-repeat: no-repeat;*/
+	background-size: 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+
+}
+
+div.img-1 {
+	background: url('../images/Tile-Number.png');
+}
+
+div.img-2 {
+	background: url('../images/Tile-Number-1.png');	
+}
+
+div.img-3 {
+	background: url('../images/Tile-Number-2.png');
+}
+
+div.img-4 {
+	background: url('../images/Tile-Number-3.png');
+}
+
+div.img-5 {
+	background: url('../images/Tile-Number-4.png');
+}
+
+
+.return-play {
+	max-width: 50px;
+	position: fixed;
+	top: 20px;
+	left: 0px;
+	cursor: pointer;
+	background: #EEEEEE;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.6);
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #663300;
+	font-weight: 500;
+	text-decoration: none;
+	display: block;
+}
+
+.how-to-play {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	font-size: 48px;
+	font-weight: 500;
+}
+
+.how-index-play {
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	background: #FF9900;
+	border: 2px solid white;
+	border-radius: 30px;
+	max-width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.t0 {
+	top: 0px;
+}
+
+.anim-global {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+}
+
+.great-job {
+	text-align: center;
+	font-size: 36px;
+	color: white;
 }
