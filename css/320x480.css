@@ -1,0 +1,547 @@
+
+body {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	background: #663300;
+}
+
+.game-container {
+	width: 320px;
+	height: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+}
+
+.stats {
+	width: 320px;
+	height: 60px;
+	background: #643B0F;
+	margin-right: auto;
+	margin-left: auto;
+}
+.stats div {
+	float: left;
+	height: 100%;
+	border-color: #3e8f3e;
+}
+.stats div:first-child {
+	width: 130px;
+}
+
+.stats div:nth-child(2) {
+	width: 60px;
+	background: rgb(41,154,11);
+	background: -moz-linear-gradient(top, rgba(41,154,11,1) 0%, rgba(41,154,11,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,154,11,1)), color-stop(100%,rgba(41,154,11,1)));
+	background: -webkit-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: -o-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: -ms-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: linear-gradient(to bottom, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#299a0b', endColorstr='#299a0b',GradientType=0 );
+}
+.stats div:last-child {
+	width: 130px;
+}
+
+.stats div p {
+	font-size: 24px;
+	font-weight: 500;
+	color: white;
+	text-align: center;
+	padding-top: 4px;
+}
+
+.tile-container {
+	background: #643B0F;
+	max-width : 320px;
+	max-height: 320px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 320px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+.tile-game-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+}
+
+.tile {
+	background: #BA6222;
+	float: left;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.6);
+	cursor: pointer;
+	color: white;
+	font-weight: 500;
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.tile div {
+	width: 100%;
+	height: 100%;
+}
+
+
+.tile div.shield {
+	z-index: 1;
+	background: #16222d;
+	left: 0px;
+	
+}
+
+.dim-4x4 {
+	width: 68px;
+	height: 68px;
+}
+
+.dim-4x4 div {
+	font-size: 48px;
+	line-height: 1.45;
+	position: absolute;
+	z-index: 0;
+}
+
+.dim-4x4 div.shield {
+	top: -68px;
+}
+
+.dim-4x4 div.anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+    background: rgba(3,168,23,1);
+}
+
+
+.dim-4x4 div.anim-next {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+}
+
+
+
+.dim-5x5 {
+	width: 52px;
+	height: 52px;
+}
+
+.dim-5x5 div {
+	font-size: 36px;
+	line-height: 1.45;
+	position: absolute;
+	z-index: 0;
+
+}
+
+.dim-5x5 div.shield {
+	top: -52px;
+}
+
+.dim-5x5 div.anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+    background: rgba(3,168,23,1);
+}
+
+.dim-6x6 {
+	width: 42px;
+	height: 42px;
+}
+
+.dim-6x6 div {
+	font-size: 28px;
+	line-height: 1.55;
+	position: absolute;
+	z-index: 0;
+}
+
+.dim-6x6 div.shield {
+	top: -42px;
+}
+
+.dim-6x6 div.anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+    background: rgba(3,168,23,1);
+}
+
+.dim-7x7 {
+	width: 34px;
+	height: 34px;
+}
+
+.dim-7x7 div {
+	font-size: 24px;
+	line-height: 1.55;
+	position: absolute;
+	z-index: 0;
+}
+
+.dim-7x7 div.shield {
+	top: -34px;
+}
+
+.dim-7x7 div.anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+    background: rgba(3,168,23,1);
+}
+
+.dim-8x8 {
+	width: 33px;
+	height: 33px;
+	margin-top: 6px;
+	margin-left: 6px;
+}
+
+.dim-8x8 div {
+	font-size: 24px;
+	line-height: 1.55;
+	position: absolute;
+	z-index: 0;
+}
+
+.tile div.shield {
+	z-index: 1;
+	background: #16222d;
+	left: 0px;
+	
+}
+
+.dim-8x8 div.shield {
+	top: -33px;
+	
+}
+
+.dim-8x8 div.anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: 0px;
+    background: rgba(3,168,23,1);
+}
+
+.anim4x4 {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: -214px;
+}
+
+.anim5x5 {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: -166px;
+}
+
+.anim6x6 {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: -134px;
+}
+
+.anim7x7 {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: -110px;
+}
+
+
+.anim8x8 {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top: -94px;
+}
+
+.tile-active {
+	background: #3399FF;
+}
+
+.num-find-container {
+	position: absolute;
+	width: 100%;
+	top: -320px;
+	left: 0px;
+	padding-top: 40px;
+}
+.num-find {
+	max-width: 200px;
+	color: white;
+	background: #266A2E;
+	text-align: center;
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	border: 2px solid;
+}
+.p-divider {
+	height: 6px;
+	background: white;
+}
+
+.num-find p:first-child, .num-find p:nth-child(4) {
+	margin-bottom: 5px;
+}
+
+.num-find p:last-child, .num-find p:nth-child(3) {
+	font-size: 72px
+}
+
+.anim-find-number {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+	top: -500px;
+	position: absolute;
+}
+
+
+.level-up-pop-container {
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	z-index: 100;
+}
+
+.level-up-pop-top {
+	top: -500px;
+}
+
+.level-up-pop {
+	width: 200px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 98px;
+	background: #16222d;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.6);
+}
+
+.level-up-pop p:first-child {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.level-up-pop div:last-child {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background: #FF9900;
+	font-size: 28px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 2px solid;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.level-up-anim {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top : 0px;
+}
+
+.level-up-exit {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+    top : 500px;
+}
+
+/*GLOBAL CSS*/
+.b-green {
+	background: rgb(41,154,11);
+	background: -moz-linear-gradient(top, rgba(41,154,11,1) 0%, rgba(41,154,11,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,154,11,1)), color-stop(100%,rgba(41,154,11,1)));
+	background: -webkit-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: -o-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: -ms-linear-gradient(top, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	background: linear-gradient(to bottom, rgba(41,154,11,1) 0%,rgba(41,154,11,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#299a0b', endColorstr='#299a0b',GradientType=0 );
+}
+.b-red {
+	background: rgb(204,0,0);
+	background: -moz-linear-gradient(top, rgba(204,0,0,1) 0%, rgba(112,0,0,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,0,0,1)), color-stop(100%,rgba(112,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(112,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(112,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(112,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(204,0,0,1) 0%,rgba(112,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#700000',GradientType=0 );
+}
+
+div.div-ack {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 30px;
+	float: none;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+div.info-game {
+	width: 100%;
+	float: none;
+}
+
+div.info-game p.strive{
+	color :white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+div.info-game div {
+	text-align: center;
+}
+
+.acknowledgement {
+	font-size: 14px;
+	color: #776e65;
+	text-align: center;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.author {
+	font-size: 16px;
+	color: white;
+}
+
+/*how to play*/
+
+div.how-container {
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.how-container div {
+	width: 100%;
+	height: 362px;
+	margin-top: 10px;
+	/*background-repeat: no-repeat;*/
+	background-size: 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+
+}
+
+div.img-1 {
+	background: url('../images/Tile-Number.png');
+}
+
+div.img-2 {
+	background: url('../images/Tile-Number-1.png');	
+}
+
+div.img-3 {
+	background: url('../images/Tile-Number-2.png');
+}
+
+div.img-4 {
+	background: url('../images/Tile-Number-3.png');
+}
+
+div.img-5 {
+	background: url('../images/Tile-Number-4.png');
+}
+
+
+.return-play {
+	max-width: 50px;
+	position: fixed;
+	top: 20px;
+	left: 0px;
+	cursor: pointer;
+	background: #EEEEEE;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.6);
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #663300;
+	font-weight: 500;
+	text-decoration: none;
+	display: block;
+}
+
+.how-to-play {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	font-size: 48px;
+	font-weight: 500;
+}
+
+.how-index-play {
+	color: white;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	background: #FF9900;
+	border: 2px solid white;
+	border-radius: 30px;
+	max-width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.t0 {
+	top: 0px;
+}
+
+.anim-global {
+	-webkit-transition-property : top 1s ease-in-out 1s;
+	transition-property : top 1s ease-in-out 1s;
+    transition-duration : 1s;
+}
+
+.great-job {
+	text-align: center;
+	font-size: 36px;
+	color: white;
+}
